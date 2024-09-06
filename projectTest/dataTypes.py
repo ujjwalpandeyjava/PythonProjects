@@ -1,4 +1,5 @@
 # Python data types
+from PIL.ImImagePlugin import number
 
 # Numeric Types
 # Integer examples
@@ -40,10 +41,16 @@ print("body =", body)
 print("numbers =", numbers)                     # Print full list
 print(f"First element: {numbers[0]}")           # From start index
 print(f"Last element: {numbers[-1]}")           # From last index
-print(f"From to: {numbers[1:4]}")               # From start x to start y
-print(f"From to negative: {numbers[1:-2]}")     # From start x to last y
+print(f"From to: {numbers[1:4]}")               # From start x to start y (excluded last)
+print(f"From to negative: {numbers[1:-2]}")     # From start x to last y (excluded last)
 print(f"Count: {len(numbers)}")
 print(f"Repeated '4' times: {numbers.count(4)}")
+numbers.append(89)                              # Add object y in last
+numbers.insert(2, 90)           # Insert at index x object y
+print(f"Updated list: {numbers}")
+numbers.remove(1)                               # Remove form index (works from 1)
+print(f"Updated list: {numbers}")
+
 
 # Tuple examples
 point = (2, 3)

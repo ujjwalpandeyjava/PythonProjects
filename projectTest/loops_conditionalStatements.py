@@ -33,8 +33,24 @@ while count < 5:
     print(count)
     count += 1
 
+# Range (we can directly use the range in the loop - no need of variable) (last excluded)
+print("\nRange object")
+listOfRange = range(4)
+listOfRange2 = range(3, 5)
+listOfRangeStepped = range(3, 15, 2)
+print(f"listOfRange: {listOfRange}, listOfRange2: {listOfRange2}, listOfRangeStepped: {listOfRangeStepped}")
+for i in listOfRange:
+    print(f"listOfRange i: {i}")
+print("\n\n")
+for i in listOfRange2:
+    print(f"listOfRange2 i: {i}")
+print("\n\n")
+for i in listOfRangeStepped:
+    print(f"listOfRangeStepped i: {i}")
+
+
 # break statement
-print("\nbreak statement")
+print("\nBreak statement")
 for i in range(1_0):
     if i == 5:  # Don't print after as 5 comes
         break
